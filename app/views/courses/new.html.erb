@@ -1,0 +1,27 @@
+<% provide(:title, 'Creat new course') %>
+<h1>Creat new course</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@course) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :start_date %>
+      <%= f.text_field :start_date %>
+
+      <%= f.label :end_date %>
+      <%= f.text_field :end_date %>
+
+      <%= f.text_area :instruction, placeholder: "Compose new micropost..." %>
+
+      <%= f.submit "Create new course", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+<script type="text/javascript">
+  jQuery('#course_start_date').datetimepicker();
+  jQuery('#course_end_date').datetimepicker();
+</script>
