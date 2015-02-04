@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find params[:id] 
+    @user = User.find params[:id]
   end
 
   def update
@@ -22,13 +22,13 @@ class UsersController < ApplicationController
       render 'edit'
     end
   end
-  
+
   private
   def user_params
     params.require(:user).permit(:name, :email, :password,
       :password_confirmation)
   end
-  
+
   def logged_in_user
     unless logged_in?
       store_location
