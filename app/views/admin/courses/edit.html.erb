@@ -1,5 +1,5 @@
-<% provide(:title, 'Creat new course') %>
-<h1>Make new course</h1>
+<% provide(:title, 'Edit course') %>
+<h1>Edit course</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
@@ -18,7 +18,7 @@
       <%= f.text_area :instruction, placeholder: "Compose instruction..." %>
 
       <%= f.collection_check_boxes :subject_ids, Subject.all, :id, :name %>
-      <%= f.submit "Submit", class: "btn btn-primary" %>
+      <%= f.submit "Update", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>

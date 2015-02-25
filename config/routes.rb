@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     root 'users#index'
     #match 'users/:id' => 'users#destroy', :via => :delete, :as => :admin_destroy
     get    'signup'   => 'users#new'
+
     resources :users
     resources :courses
   end

@@ -1,11 +1,13 @@
 <% provide(:title, 'All courses') %>
 <h1>All courses</h1>
+<%= link_to "Add", new_admin_course_path, class: "glyphicon glyphicon-plus" %>
 <div class="table-responsive">
   <table class="table">
     <thead>
       <tr>
         <th>Name</th>
         <th>Created at</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
