@@ -29,6 +29,7 @@ gem 'bootstrap-will_paginate', '0.0.10'
 gem 'carrierwave',             '0.10.0'
 gem 'mini_magick',             '3.8.0'
 gem 'fog',                     '1.23.0'
+gem 'jquery-datetimepicker-rails', '~> 2.4.1.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
