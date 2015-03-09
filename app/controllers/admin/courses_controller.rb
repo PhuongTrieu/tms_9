@@ -34,6 +34,15 @@ class Admin::CoursesController < ApplicationController
     end
   end
 
+  def destroy
+    @course = Course.find params[:id]
+
+    if @course.destroy
+      flash[:success] = "Course has been deleted successfully!"
+      redirect_to admin_courses_path
+    end
+  end
+
   private
   def course_params
     params.require(:course).permit :name, :start_date, :end_date,
