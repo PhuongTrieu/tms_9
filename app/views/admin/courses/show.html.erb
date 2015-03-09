@@ -1,0 +1,19 @@
+<% provide(:title, "Course information") %>
+<div class="row">
+  <div class="col-md-4">
+    <h3>Course: <%= @course.name %></h3>
+    <p>Created at: <%= @course.created_at %></p>
+    <p>Start date at: <%= @course.start_date %></p>
+    <p>End date at: <%= @course.end_date %></p>
+    <p><%= link_to "Edit", edit_admin_course_path(@course),
+                    class: "glyphicon glyphicon-pencil" %></p>
+  </div>
+  <div class="col-md-8">
+    <h4>Subjects</h4>
+    <ul class="jumbotron">
+      <% @course.subjects.each do |subject| %>
+        <li><%= subject.name %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
