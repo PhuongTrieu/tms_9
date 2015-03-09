@@ -21,6 +21,19 @@ class Admin::CoursesController < ApplicationController
     end
   end
 
+  def edit
+    @course = Course.find params[:id]
+  end
+
+  def update
+    @course = Course.find params[:id]
+
+    if @course.update_attributes course_params
+      flash[:success] = "Course has been update successfully!"
+      redirect_to admin_course_path @course
+    end
+  end
+
   private
   def course_params
     params.require(:course).permit :name, :start_date, :end_date,
