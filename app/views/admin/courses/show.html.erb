@@ -15,5 +15,11 @@
         <li><%= subject.name %></li>
       <% end %>
     </ul>
+    <h4>Users</h4>
+    <ul class="jumbotron">
+      <% @course.users.each do |user| %>
+        <li><%= link_to user.name, user %></li>
+      <% end %>
+    </ul>
   </div>
 </div>

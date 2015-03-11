@@ -20,6 +20,10 @@
       <%= f.collection_check_boxes(:subject_ids, Subject.all, :id, :name) do |b| %>
         <%= b.label(:"data-value" => b.value) {b.check_box + b.text} %> &nbsp
       <% end %>
+      <h3>Add user:</h3>
+      <%= f.collection_check_boxes(:user_ids, User.all, :id, :name) do |b| %>
+        <%= b.label(:"data-value" => b.value) {b.check_box + b.text} %> &nbsp
+      <% end %>
       <%= f.submit "Update", class: "btn btn-primary" %>
     <% end %>
   </div>

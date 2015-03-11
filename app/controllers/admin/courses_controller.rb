@@ -17,6 +17,7 @@ class Admin::CoursesController < ApplicationController
       flash[:success] = "A new course has been created successfully!"
       redirect_to admin_courses_path
     else
+      flash[:danger] = "Create Fail!"
       redirect_to new_admin_course_path
     end
   end
@@ -46,6 +47,7 @@ class Admin::CoursesController < ApplicationController
   private
   def course_params
     params.require(:course).permit :name, :start_date, :end_date,
-                                  :instruction, :subject_ids => []
+                                  :instruction, :subject_ids => [],
+                                  :user_ids => []
   end
 end
